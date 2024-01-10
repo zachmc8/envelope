@@ -1,0 +1,55 @@
+
+.add {
+	border: 1px outset black;
+	background-color: white;
+	height: 100px;
+	width: 100px;
+	cursor: pointer;
+	font-size: 30px;
+	display: inline-block;
+	margin: auto;
+}
+
+.envelopes {
+	border: 1px;
+	border-color: rgba(0,0,0,0);
+	background-image: url("images/closed_envelope.png");
+	background-size: cover;
+	height: 100px;
+	width: 100px;
+	cursor: pointer;
+	font-size: 5vw;
+	font-family: 'Apple Chancery', sans-serif, cursive;
+	font-weight: 500;
+	color: darkgreen;
+	display: inline-block;
+	margin: auto;
+	object-fit: contain;
+}
+
+.envelope-container {
+	display: none;
+}
+
+.envelopes:hover {
+	background-image: url("images/open_envelope.png");
+}
+
+.add:hover {
+	background-color: lightgrey;
+}
+
+.form-popup {
+	display: none;
+	position: fixed;
+	margin: auto;
+	width: 50%;
+	border: 3px black;
+	padding: 10px;
+}
+
+.form-container {
+	max-width: 300px;
+	padding: 10px;
+	background-color: white;
+}

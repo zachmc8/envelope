@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Envelope</title>
+	<link rel="stylesheet" href="./style.css">
+	<script type="text/javascript" src="./index.js" defer></script>
+	<link href="https://fonts.cdnfonts.com/css/apple-chancery" rel="stylesheet">
+                
+</head>
+<body>
+	<div class="container">
+		<h1>Envelope</h1>
+		<p class="subheading">Welcome to this Envelope Budgeting Web Application. To learn more about the envelope method, click <a href="https://en.wikipedia.org/wiki/Envelope_system" target="_blank">here</a>.</p>
+	</div>
+	<div class="add">
+		<button class="add" onclick='openForm("makeEnvelope")'>+</button>
+	</div>
+	<div class="envelope-container" id="envelope-container">
+	</div>
+	<div class="form-popup" id="makeEnvelope">
+		<form class="form-container" onsubmit="return useForm()">
+			<label for="name">Envelope Name</label><br>
+			<input type="text" id="name" autocomplete="off"><br>
+			<label for="amt">Amount (in $)</label><br>
+			<input type="number" id="amt" autocomplete="off"><br>
+			<button type="submit">Submit</button>
+			<button type="button" class="btn cancel" onclick='closeForm("makeEnvelope")'>Close</button>
+		</form>
+	</div>
+	<div class="form-popup" id="editEnv">
+		<p id="statement"></p>
+		<form class="form-container" id="editForm" onsubmit="return editEnvelope()">
+			<legend>Would you like to add or subtract funds?</legend>
+			<input type="radio" name="action" id="addVal" value="add" autocomplete="off">
+			<label for="addVal">Add</label><br>
+			<input type="radio" name="action" id="subVal" value="sub" autocomplete="off">
+			<label for="subVal">Subtract</label><br>
+			<label for="editAmt">Amount</label><br>
+			<input type="number" id="editAmt" autocomplete="off"><br>
+			<button type="submit" name="btnSubmit">Submit</button>
+			<button type="button" onclick='closeForm("editEnv")'>Close</button>
+		</form>
+	</div>
+</body>
+</html>
